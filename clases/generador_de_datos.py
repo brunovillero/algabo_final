@@ -28,7 +28,7 @@ class generador_de_datos:
             cantidad_hijos = random.randint(1, self.max_cant_niños_por_familia)
             #Asignamos centros aleatoreos
             random.shuffle(copia_centros)
-            centros_pref_familia = copia_centros[ 0 : self.max_cant_de_centros_pref_familias - 1]
+            centros_pref_familia = copia_centros[ 0 : self.max_cant_de_centros_pref_familias]
             #Guardamos la nueva familia
             familia_obj = familia(id, cantidad_hijos, centros_pref_familia)
             self.familias.append(familia_obj)
