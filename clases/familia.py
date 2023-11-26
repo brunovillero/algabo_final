@@ -9,3 +9,5 @@ class familia:
         return self.cantidad_hijos
     def get_centros_preferenciales(self):
         return self.centros_preferenciales
+    def __str__(self):
+        return str(self.id)

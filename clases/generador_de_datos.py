@@ -1,5 +1,6 @@
 import random
-from clases import familia, centro
+from clases.familia import familia
+from clases.centro import centro
 
 class generador_de_datos:
     def __init__(self, nombres_de_centros):
@@ -29,8 +30,8 @@ class generador_de_datos:
             random.shuffle(copia_centros)
             centros_pref_familia = copia_centros[ 0 : self.max_cant_de_centros_pref_familias - 1]
             #Guardamos la nueva familia
-            print(centros_pref_familia, cantidad_hijos)
-            #self.familias.append(familia(id, cantidad_hijos, centros_pref_familia))
+            familia_obj = familia(id, cantidad_hijos, centros_pref_familia)
+            self.familias.append(familia_obj)
         
         copia_familias = self.familias
         #Generamos centros
@@ -40,4 +41,5 @@ class generador_de_datos:
             #Asignamos capacidad maxima aleatorea
             capacidad = random.randint(self.min_cant_niños_en_centro, self.max_cant_niños_en_centro)
             #Creamos centros
-            #self.centros.append(centro(nombre_centro, capacidad, copia_familias))
+            centro_obj = centro(nombre_centro, capacidad, copia_familias)
+            self.centros.append(centro_obj)

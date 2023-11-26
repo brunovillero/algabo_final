@@ -8,6 +8,5 @@ centros = []
 for centro in file:
     centros.append(centro["NOMBRE DEL CENTRO"])
 
-print(centros)
 generador = generador_de_datos(centros)
 generador.generar()
