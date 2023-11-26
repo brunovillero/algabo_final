@@ -9,4 +9,5 @@ class centro:
         return self.capacidad_max
     def get_familias_preferenciales(self):
         return self.familias_preferenciales
-    
+    def __str__(self):
+        return self.nombre

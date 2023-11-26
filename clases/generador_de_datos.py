@@ -23,7 +23,7 @@ class generador_de_datos:
 
         copia_centros = self.nombres_de_centros
         #Generamos familias
-        for id in range(1, self.numero_de_familias):
+        for id in range(1, self.numero_de_familias + 1):
             #Generamos cantidad de hijos
             cantidad_hijos = random.randint(1, self.max_cant_niños_por_familia)
             #Asignamos centros aleatoreos
